@@ -37,8 +37,7 @@ fn view(app: &App, _model: &Model, frame: Frame) {
 
 fn draw_line(draw: &mut Draw, start: Point2, step: f32) {
     let line_color = Rgb8::new(238, 164, 127);
-    let fifty_fifty = random_range(0.0, 1.0) > 0.5;
-    if fifty_fifty {
+    if random::<bool>() {
         draw.line()
             .start(start)
             .end(start + Point2::new(step, -step))
